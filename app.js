@@ -69,7 +69,7 @@ app.get("/posts/:id", (req, res) => {
 </html>`);
 });
 
-const PORT = 1337;
+const { PORT = 1337 } = process.env;
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
